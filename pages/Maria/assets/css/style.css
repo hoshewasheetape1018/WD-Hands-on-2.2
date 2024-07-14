@@ -1,0 +1,194 @@
+html {
+    cursor:url('../img/circle-fill.svg'), auto;
+}
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px; 
+    position: fixed;
+    width: 100%;
+    top: -1px;
+    z-index: 1000; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo-container {
+    margin-right: auto; 
+    margin-top:5px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+    flex-grow: 1; 
+    font-size: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.2s ease-in-out;
+}
+
+.navigation a:hover {
+    scale:1.09;
+}
+
+.navigation a:hover {
+    text-shadow: 
+-1px -1px 10px #ff8dd97b,
+1px -1px 10px #ff8dd97b,
+-1px  1px 10px #ff8dd97b,
+1px  1px 10px #ff8dd97b;
+}
+
+
+.content1 {
+    background-image: url("../img/jellymoonie.png");
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.content2 {
+    position: relative;
+    margin-top: -90px;
+    background: linear-gradient(to bottom, #ffffff00 0%, #ffffff80 5%, rgb(255, 255, 255) 10%);
+    height: 100vh;
+}
+
+body {
+    background-color: pink;
+    overflow-x: hidden;
+}
+
+.vertical-line {
+    width:1px; background-color: white; height: 30vh;
+    position: absolute;
+    left:2%;
+    bottom: 0%;
+}
+
+.container-circle {
+    position:absolute;
+    top: 8%;
+    left:2%;
+
+}
+
+.color-circle {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    background-color: green;
+    outline: 5px solid white;
+    margin-block: 40px;
+
+}
+
+.ad-container { 
+    background-color: white;
+    position: absolute;
+    height: 100px;
+    width: 150px;
+    display: flex;
+    right: 0%;
+    top:15%;
+}
+
+h2 {
+    position: absolute;
+}
+
+
+button {
+    bottom:1%;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+}
+
+.artist-credit {
+    top:55%;
+    color:red;
+    position: absolute;
+    rotate: 90deg;
+    left:-2%;
+    font-family: 'Inter', sans-serif;
+}
+
+.caution {
+    background-color: #ff0055;
+    height: 50px;
+    width: 200vw;
+    position: absolute;
+    z-index: 10;
+    rotate: 5deg;
+    box-shadow: 5px 3px 5px #888888;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    transform: translateX(-100%);
+}
+
+.caution p {
+    display: inline-block;
+    animation: loop 5s linear infinite;
+    white-space: nowrap;
+    margin: 15px;
+
+}
+
+.caution p:hover {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 1s linear infinite;
+  }
+
+  .marquee:hover .marquee-inner {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(49); }
+    to { transform: translateX(-19%); }
+  }
+
+
+#c2 {
+    background-color: #ff0055;
+    margin-top: -5%;
+    rotate: -3deg;
+    z-index: 12;
+}
+
+
+
+  @keyframes intro {
+    100% {
+    transform: translateX(100%);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .caution {
+      animation: intro forwards;
+      animation-timeline: view();
+      animation-range:cover;
+      animation-fill-mode: forwards;
+    }
+  }
+  
+  @layer demo.support {
+    body {
+      min-block-size: 100dvh;
+    }
+  }
