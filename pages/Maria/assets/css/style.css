@@ -5,7 +5,7 @@ html {
     display: flex;
     align-items: center;
     padding: 0 20px; 
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: -1px;
     z-index: 1000; 
@@ -66,6 +66,8 @@ html {
 body {
     background-color: pink;
     overflow-x: hidden;
+    width: 100vw;
+    margin:0;
 }
 
 .vertical-line {
@@ -87,20 +89,73 @@ body {
     height: 30px;
     width: 30px;
     position: relative;
-    background-color: green;
+    background-color: #6A4852;
     outline: 5px solid white;
     margin-block: 40px;
 
 }
 
+.color-circle:nth-child(2){
+    background-color: #E22678;
+}
+
+.color-circle:nth-child(3){
+    background-color: #B481E1;
+}
+
+.cn {
+    position: absolute;
+    color:#E22678;
+    text-shadow: 3px 0px white;
+    font-size:3em ;  
+    z-index: 10;
+    width: 1vw;
+    margin-top: 1em;
+    left:9%;
+    animation: fadein 1s ease-out, slidedown 1s ease-out;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+@keyframes slidedown {
+    from {
+        transform: translateY(-2%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
 .ad-container { 
     background-color: white;
     position: absolute;
-    height: 100px;
-    width: 150px;
-    display: flex;
+    height: 200px;
+    width: 300px;
     right: 0%;
     top:15%;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    box-shadow: 10px 3px 5px rgba(58, 58, 58, 0.466);
+   transition: transform 100ms ease-in-out, rotate 250ms  cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.ad-container img {
+    margin-top: 5%;
+    margin-bottom: 1%;
+    height:70%;
+    object-fit: contain;
+}
+.ad-container:hover {
+    transform:scale(1.1);
+    rotate:2deg;
 }
 
 h2 {
@@ -117,7 +172,7 @@ button {
 
 .artist-credit {
     top:55%;
-    color:red;
+    color:white;
     position: absolute;
     rotate: 90deg;
     left:-2%;
@@ -141,7 +196,6 @@ button {
 
 .caution p {
     display: inline-block;
-    animation: loop 5s linear infinite;
     white-space: nowrap;
     margin: 15px;
 
@@ -150,7 +204,7 @@ button {
 .caution p:hover {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee 1s linear infinite;
+    animation: marquee 12s linear infinite;
   }
 
   .marquee:hover .marquee-inner {
@@ -174,15 +228,15 @@ button {
 
   @keyframes intro {
     100% {
-    transform: translateX(100%);
+    transform: translateX(-30%);
     }
   }
   
   @media (prefers-reduced-motion: no-preference) {
     .caution {
-      animation: intro forwards;
-      animation-timeline: view();
-      animation-range:cover;
+      animation: intro linear;
+      animation-timeline: scroll();
+      animation-range: 0% 70%;
       animation-fill-mode: forwards;
     }
   }

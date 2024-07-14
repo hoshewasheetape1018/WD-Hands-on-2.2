@@ -117,4 +117,9 @@ WD-ProjectName
 <!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| Google Fonts | Fonts | https://fonts.google.com/ |
+|Introduction to timeline-animation | Timeline animation | https://tympanus.net/codrops/2024/01/17/a-practical-introduction-to-scroll-driven-animations-with-css-scroll-and-view/ |
+| Timeline Animation | Timeline-animation implementation | https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline https://www.youtube.com/watch?v=kAtuZDPe9DE |
+| Guide for UI | UI Design | https://ishadeed.com/article/handling-text-over-image-css/ |
+|W3Schools| HTML, CSS | https://www.w3schools.com/ |
+|Figma | Design Plan | https://www.figma.com/design/qxZx7163HeuxHngdIsoCwl/Design-ILUNA?node-id=0-1&t=snbQGIGMgSG26xwg-1 |
