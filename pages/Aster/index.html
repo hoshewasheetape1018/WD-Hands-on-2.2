@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading and Carousel</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/intro.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria Marionette</title>
-    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
 <body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <p class="loading-text">Loading</p>
+            <img src="./assets/img/turtle.png" alt="Loading image" class="loading-image">
+        </div>
+    </div>
     <div class="header">
         <a href="../../index.html"><div class="logo-container"><img src="./assets/img/favicon.ico" alt="iluna logo" class = "logo"></div> </a>
 
@@ -20,11 +24,81 @@
           <a href="../Aia/index.html"><div class="navigation-content">AIA</div></a>
           <a href="../Ren/index.html"><div class="navigation-content">REN</div></a>
           <a href="../Scarle/index.html"><div class="navigation-content">SCARLE</div></a>
+          <a href="../card-gallery/index.html"><div class="navigation-content">CARD GALLERY</div></a>
+        </div>
+    </div>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+<!-- particles.js library -->
+<script src="./assets/js/particles.js"></script>
+<script src="./assets/js/particles.min.js"></script>
+
+
+
+    <div class="section1">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active first-slide">
+                    <button class="btn btn-primary subscribe-btn">Subscribe</button>
+                </div>
+                <div class="carousel-item second-slide">
+                    <button class="btn btn-primary watch-btn">Watch Now</button>
+                </div>
+                <div class="carousel-item third-slide">
+                    <h1 class="carousel-header">Gaming Achievements</h1>
+                    <div class="card-deck">
+                        <div class="card">
+                            <img src="placeholder.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Achievement 1</h5>
+                                <div class="collapse" id="collapse1">
+                                    <div class="card card-body">
+                                        Additional information about Achievement 1.
+                                    </div>
+                                </div>
+                                <a class="btn btn-secondary" data-toggle="collapse" href="#collapse1">More Info</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="placeholder.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Achievement 2</h5>
+                                <div class="collapse" id="collapse2">
+                                    <div class="card card-body">
+                                        Additional information about Achievement 2.
+                                    </div>
+                                </div>
+                                <a class="btn btn-secondary" data-toggle="collapse" href="#collapse2">More Info</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="placeholder.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Achievement 3</h5>
+                                <div class="collapse" id="collapse3">
+                                    <div class="card card-body">
+                                        Additional information about Achievement 3.
+                                    </div>
+                                </div>
+                                <a class="btn btn-secondary" data-toggle="collapse" href="#collapse3">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 
-
-
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

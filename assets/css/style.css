@@ -106,6 +106,7 @@ html {
     display: block;  
     justify-content: center;
     background-image: url("../img/bg.png");
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     text-align: center;

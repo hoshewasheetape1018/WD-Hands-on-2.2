@@ -273,6 +273,7 @@ button {
     width:278px;
     font-size: 40px;
     background-color: #A6354E;
+    animation: fadein 1.5s ease-out, slidedown2 2s cubic-bezier(0.23, 1, 0.320, 1);
     a {    color: white;
     }
 }
@@ -290,7 +291,7 @@ button:hover {
     color:white;
     position: absolute;
     rotate: 90deg;
-    left:-2%;
+    left:-3%;
     font-family: 'Inter', sans-serif;
 }
 

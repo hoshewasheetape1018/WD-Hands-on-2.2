@@ -1,9 +1,16 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 
 .header {
+    text-align: center;
     display: flex;
     align-items: center;
     padding: 0 20px; 
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: -1px;
     z-index: 1000; 
@@ -12,10 +19,17 @@
 
 .logo-container {
     margin-right: auto; 
-    margin-top:5px;
+    position: absolute;
+    top:4%;
+}
+
+.header img {
+filter: invert(100%);
 }
 
 .navigation {
+    width: 100vw;;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +41,7 @@
 
 .navigation a {
     text-decoration: none;
-    color: black;
+    color: white;
     transition: 0.2s ease-in-out;
 }
 
@@ -41,4 +55,166 @@
 1px -1px 10px #ff8dd97b,
 -1px  1px 10px #ff8dd97b,
 1px  1px 10px #ff8dd97b;
+}
+
+
+#loading-screen {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#beb0ff, #6f55e7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    animation: fadeOut 2s forwards;
+    animation-delay: 5s;
+    opacity: 0;
+}
+
+.loading-content {
+    display: flex;
+    align-items: center;
+}
+
+.loading-text {
+    color: rgb(218, 218, 0);
+    font-size: 3rem;
+    margin-right: 10px;
+    position: relative;
+    font-weight: bold;
+}
+
+.loading-text::after {
+    content: " .";
+    animation: loadingDots 1s steps(3, end) infinite;
+}
+
+.loading-image {
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes loadingDots {
+    0%, 100% { content: " ."; }
+    33% { content: " .."; }
+    66% { content: " ..."; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; pointer-events: none; }
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.section1 {
+    height: 100vh;
+    width: 100vw;
+}
+
+.carousel-item {
+    position: relative;
+    height: 100vh;
+}
+
+.subscribe-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem !important;
+    border-radius:40px !important;
+    border: 4px solid white !important;
+    mix-blend-mode: lighten;
+    font-weight: bolder !important;
+    background-color: transparent !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* White glow */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8) !important; /* Glow */
+    transition: transform 500ms ease, box-shadow 0.3s ease !important;/* Smooth transition */
+}
+
+.subscribe-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1) !important; /* Scale while maintaining centering */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 1); /* Optional increased glow on hover */
+
+}
+
+.watch-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
+.carousel-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card-deck {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 10px;
+}
+
+.first-slide {
+    background-image:url("../img/slide1.png");
+    background-size: cover;
+}
+
+.second-slide {
+    background-color: blue;
+}
+
+.third-slide {
+    background-color:hotpink
+}
+.carousel-control-next, .carousel-control-prev {
+    width:5% !important;
+}
+
+
+button {
+    bottom:1%;
+    border-radius: 40px;
+    border: 2px solid white;
+    height:82px;
+    width:278px;
+    font-size: 2rem;
+    background-color: #A6354E;
+    animation: fadein 1.5s ease-out, slidedown2 2s cubic-bezier(0.23, 1, 0.320, 1);
+    a {    color: white;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #ff80a4;
+    color: black;
 }
