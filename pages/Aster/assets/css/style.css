@@ -1,9 +1,18 @@
+#loading-screen {
+    opacity:0 ;
+}
+
+html {
+    overflow-x: hidden;
+}
 body, html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
+body :not(#loading-screen) {
+    animation-delay: 5s !important;
+}
 
 .header {
     text-align: center;
@@ -72,7 +81,6 @@ filter: invert(100%);
     pointer-events: none;
     animation: fadeOut 2s forwards;
     animation-delay: 5s;
-    opacity: 0;
 }
 
 .loading-content {
@@ -129,28 +137,46 @@ filter: invert(100%);
     height: 100vh;
 }
 
-.subscribe-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem !important;
-    border-radius:40px !important;
-    border: 4px solid white !important;
-    mix-blend-mode: lighten;
-    font-weight: bolder !important;
-    background-color: transparent !important;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* White glow */
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8) !important; /* Glow */
-    transition: transform 500ms ease, box-shadow 0.3s ease !important;/* Smooth transition */
+.sub-card {
+     width: 341px; height: 282px; position: absolute;
+     top:30%;
+}
+.Rectangle43 {
+    width: 181px; height: 49.38px; left: 0px; top: 0px; position: absolute; border-radius: 37px; border: 5px #F4CF92 solid;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);    transition: box-shadow 0.3s ease; /* Ensure this is applied for the transition */
+
 }
 
-.subscribe-btn:hover {
-    transform: translate(-50%, -50%) scale(1.1) !important; /* Scale while maintaining centering */
+.Subscribe { width: 162.90px; height: 29.50px; left: 6.67px; top: 10.65px; position: absolute; text-align: center; color: #F4CF92; font-size: 20px; font-family: Roboto; font-weight: 700; word-wrap: break-word;
+    transition: transform 250ms ease;
+}
+
+.Aster-subheader {
+     width: 341px; left: 0px; top: 191px; position: absolute; text-align: center; color: #AAAAAA; font-size: 11px; font-family: Roboto; font-weight: 400; word-wrap: break-word;
+}
+.Rectangle53 {
+    width: 341px; height: 249px; left: 0px; top: 33px; position: absolute; background: #0F0F0F; border-radius: 17px;
+}
+.Ellipse10 {
+    width: 137px; height: 137px; left: 102px; top: 0px; position: absolute; border-radius: 9999px; border: 7px #0F0F0F solid;
+}
+.AsterArcadia
+{
+    width: 341px; height: 32px; left: 0px; top: 143px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Roboto; font-weight: 700; word-wrap: break-word;
+}
+.sub-button {
+     width: 181px; height: 49.38px; left: 80px; top: 215px; position: absolute; background:transparent;    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+
+
+.sub-button:hover .Subscribe{
+    transform:scale(1.1) !important; /* Scale while maintaining centering */
+
+}
+
+.sub-button:hover .Rectangle43{
     box-shadow: 0 0 25px rgba(255, 255, 255, 1); /* Optional increased glow on hover */
-
 }
-
 .watch-btn {
     position: absolute;
     bottom: 20px;
@@ -181,7 +207,8 @@ filter: invert(100%);
 }
 
 .first-slide {
-    background-image:url("../img/slide1.png");
+    background-image:url("../img/slide1.jpg");
+    background-position: center;
     background-size: cover;
 }
 
@@ -205,7 +232,7 @@ button {
     width:278px;
     font-size: 2rem;
     background-color: #A6354E;
-    animation: fadein 1.5s ease-out, slidedown2 2s cubic-bezier(0.23, 1, 0.320, 1);
+    animation: fadein 1.5s ease-out !important;
     a {    color: white;
     }
 }
@@ -214,7 +241,394 @@ a {
     text-decoration: none;
 }
 
-button:hover {
-    background-color: #ff80a4;
+
+
+.content2 {
+    position: relative;
+    margin-top: -90px;
+    background: linear-gradient(to bottom, #ffffff00 0%, #ffffff80 5%, rgb(255, 255, 255) 10%);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    padding-bottom: 3%;
+    align-items: center;
+}
+
+.container-circle {
+    position:absolute;
+    bottom: 8%;
+    left:2%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.color-circle {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    background-color: #111811;
+    outline: 5px solid white;
+    margin-block: 40px;
+    animation: fadein 1s ease-out;
+    margin:10px;
+}
+
+.color-circle:nth-child(2){
+    background-color: #585273;
+}
+
+.color-circle:nth-child(3){
+    background-color: #F4CF92;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+@keyframes slidedown {
+    from {
+        transform: translateY(-2%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    
+@keyframes slidedown2 {
+    from {
+        transform: translateY(-5%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    
+    @keyframes slideleft {
+        from {
+            transform: translateX(-5%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideright {
+            from {
+                transform: translateX(5%);
+              }
+              to {
+                transform: translateX(0);
+              }
+            }
+
+.ad-container { 
+    background-color: white;
+    position: absolute;
+    scale:80%;
+    height: 200px;
+    width: 300px;
+    left: 0%;
+    top:10%;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    box-shadow: 10px 3px 5px rgba(58, 58, 58, 0.466);
+   transition: transform 100ms ease-in-out, rotate 250ms  cubic-bezier(0.075, 0.82, 0.165, 1);
+    a {
+        color: black;
+    }
+    animation: fadein 1s ease-out, slidedown2 1s ease-out;
+}
+
+.ad-container img {
+    margin-top: 5%;
+    margin-bottom: 1%;
+    height:70%;
+    object-fit: contain;
+}
+.ad-container:hover {
+    transform:scale(1.1);
+    rotate:2deg;
+}
+
+h2 {
+    position: absolute;
+}
+
+
+.quote-container {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    right:50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote {
+    width:100vw;
+    color:white;
+    font-family: 'Ballet', serif;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: lighter;
+    mix-blend-mode: normal;
+    animation: fadein 1s ease-out, slidedown2 1s ease-out;
+}
+
+.quote-bg {
+    background: linear-gradient(
+        to right, 
+        #82828200,
+        #A6354E 20%,
+        #A6354E 70%,
+        #82828200 100%
+    );
+    mix-blend-mode: multiply;
+    height: 7vh;
+    width: 70vw;
+    animation: insetExpand 1s forwards;
+    transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes insetExpand {
+    0% {
+        clip-path: inset(0% 50%); /* Start clipped on left and right */
+    }
+    100% {
+        clip-path: inset(0%); /* Fully reveal */
+    }
+}
+
+
+
+button {
+    animation: fadein 1.5s ease-out, slidedown2 2s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+a {
+    text-decoration: none !important;
+}
+.vertical {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    position: absolute;
+    width: 1vw;
+    margin: 0;
+    margin-left: 2%;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.cn {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+}
+
+.vertical-line {
+    width: 2px;
+    background-color: white; 
+    height: 40vh;
+    margin-top: 10px; /* Space between text and line */
+}
+
+.vertical:nth-child(2) {
+    right: 0;
+    margin-right: 2%;
+}
+
+  @keyframes intro {
+    100% {
+    transform: translateX(-30%);
+    }
+  }
+  
+  
+
+  @keyframes intro2 {
+    100% {
+    transform: translateX(0%);
+    }
+  }
+  
+
+  .maria-card {
+    background: linear-gradient(to bottom, #FAE1EF, #F3448B);
+    background: 
+    linear-gradient(#fae1ef89, hsla(336, 100%, 50%, 0.627)), 
+    url('../img/card-bg.png');
+  background-size: cover;
+  background-position: center;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    margin-top:10%;
+    width: 70vw;
+    height: 80vh;
+    overflow: hidden;
+    box-shadow: 2px 3px 5px rgba(58, 58, 58, 0.466);
+    outline: 3.5px solid black;
+
+  }
+  
+  .portrait {
+    margin: 0;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .portrait img {
+    position: relative;
+    bottom:7.7%;
+    margin-left: 5%;
+    height: 626px;
+    filter: drop-shadow(0.35rem 0.35rem #37373732);
+    clip-path: inset(0 0 10px 0);
+    border-radius: 28px;
+  }
+  
+  .maria-card-content {
+    margin:5%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Lora', sans-serif;
+    
+  
+  }
+
+  
+  .maria-card-content p {
+    text-wrap: balance;
+    font-size: 1.5rem;    
+    overflow: hidden;
+    margin-top:5px;
+}
+.card-title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 2%;
+    text-shadow: 3px 0px white;
+    font-family: 'Playfair Display';
+}
+
+.card-subtitle {
+    font-size:2rem;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 5%;
+
+}
+
+.label {
+    font-weight: bold;
+}
+
+h5 {
+    color:white;
+}
+  .copyright {
+    margin-top: 200px;
+    align-self: flex-end;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 50px;
+    width: 90vw;
+    max-width: 150px; 
+    opacity: 0;
+    font-size: 1rem; 
+    transition: opacity 0.3s;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.maria-card:hover #card2 {
+    opacity: 1;
+}
+
+.ad-container:hover #card1 {
+    opacity: 1;
+}
+
+#card1 {
+    background-color: rgba(255, 255, 255, 0.589);
+    mix-blend-mode: screen;
+    color: #ff0055;
+    bottom:-50px;
+}
+
+#card2 {
+    bottom: 20%;
+    right: 2%;
+    background-color: #4f4f4f63;
+    mix-blend-mode: multiply;
     color: black;
+}
+
+h1 {
+    color:white;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Pridi';
+    position: absolute;
+    font-size: 4rem;
+    text-shadow: 5px 4px 2px #A6354E;
+    bottom: 7%;
+    animation: fadein 1s ease-out, slidedown2 1s ease-out;
+}
+
+
+.artist-ad {
+    height: 100px;
+    width: 350px;
+    position: absolute;
+    bottom: 20%;
+    margin: 0;
+    right: 4%;
+    font-size: 2rem;
+    animation: fadein 1s ease-out, slideleft 1s ease-out;
+    h3 {margin:4px; color: #150071;font-size: 1.4em;}
+    h5 {margin: 0;  font-family: 'Noto Sans JP', sans-serif; font-weight:50px;
+    }
+}
+
+.collab-ad {
+    height: 100px;
+    width: 400px;
+    text-wrap: balance;
+    position: absolute;
+    text-align: right;
+    top:40vh;
+    margin: 0;
+    right: 4%;
+    font-size: 1.7rem;
+    animation: fadein 1s ease-out, slideright 1s ease-out;
+    h3 {margin:4px; color: white;font-size: 1.4em; text-shadow: 3px 2px #661519;}
+    h5 {margin: 0;font-size: 3rem;}
 }
