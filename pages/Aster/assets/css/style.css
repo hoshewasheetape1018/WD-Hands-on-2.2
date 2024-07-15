@@ -1,17 +1,20 @@
-#loading-screen {
-    opacity:0 ;
-}
 
-html {
-    overflow-x: hidden;
-}
-body, html {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
 body :not(#loading-screen) {
     animation-delay: 5s !important;
+    
 }
 
 .header {
@@ -37,7 +40,7 @@ filter: invert(100%);
 }
 
 .navigation {
-    width: 100vw;;
+    width: 100vw;
     height: 8vh;
     display: flex;
     justify-content: center;
@@ -80,7 +83,7 @@ filter: invert(100%);
     align-items: center;
     pointer-events: none;
     animation: fadeOut 2s forwards;
-    animation-delay: 5s;
+    animation-delay: 4.s;
 }
 
 .loading-content {
@@ -130,6 +133,7 @@ filter: invert(100%);
 .section1 {
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .carousel-item {
@@ -138,12 +142,15 @@ filter: invert(100%);
 }
 
 .sub-card {
+    scale:0.8;
      width: 341px; height: 282px; position: absolute;
+     left:2%;
      top:30%;
 }
 .Rectangle43 {
+    background-color:#150071;
     width: 181px; height: 49.38px; left: 0px; top: 0px; position: absolute; border-radius: 37px; border: 5px #F4CF92 solid;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);    transition: box-shadow 0.3s ease; /* Ensure this is applied for the transition */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);    transition: box-shadow 0.3s ease;
 
 }
 
@@ -158,31 +165,24 @@ filter: invert(100%);
     width: 341px; height: 249px; left: 0px; top: 33px; position: absolute; background: #0F0F0F; border-radius: 17px;
 }
 .Ellipse10 {
-    width: 137px; height: 137px; left: 102px; top: 0px; position: absolute; border-radius: 9999px; border: 7px #0F0F0F solid;
+    width: 137px; height: 137px; left: 96px; top: 0px; position: absolute; border-radius: 9999px; border: 7px #0F0F0F solid;
 }
 .AsterArcadia
 {
     width: 341px; height: 32px; left: 0px; top: 143px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Roboto; font-weight: 700; word-wrap: break-word;
 }
 .sub-button {
-     width: 181px; height: 49.38px; left: 80px; top: 215px; position: absolute; background:transparent;    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+     width: 181px; height: 49.38px; left: 80px; top: 215px; position: absolute; background:transparent;   
     }
 
 
 .sub-button:hover .Subscribe{
-    transform:scale(1.1) !important; /* Scale while maintaining centering */
+    transform:scale(1.1) !important; 
 
 }
 
 .sub-button:hover .Rectangle43{
-    box-shadow: 0 0 25px rgba(255, 255, 255, 1); /* Optional increased glow on hover */
-}
-.watch-btn {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 1);
 }
 
 .carousel-header {
@@ -196,11 +196,7 @@ filter: invert(100%);
     margin: 20px;
 }
 
-.card {
-    flex: 1;
-    margin: 10px;
-    text-align: center;
-}
+
 
 .card-title {
     margin-bottom: 10px;
@@ -213,7 +209,19 @@ filter: invert(100%);
 }
 
 .second-slide {
-    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh; 
+    width: 100vw;}
+
+#myVideo {
+    overflow: hidden;
+    align-self: center;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
 }
 
 .third-slide {
@@ -221,6 +229,7 @@ filter: invert(100%);
 }
 .carousel-control-next, .carousel-control-prev {
     width:5% !important;
+    z-index: 99999 !important;
 }
 
 
@@ -242,7 +251,6 @@ a {
 }
 
 
-
 .content2 {
     position: relative;
     margin-top: -90px;
@@ -251,8 +259,9 @@ a {
     display: grid;
     place-items: center;
     width: 100vw;
-    padding-bottom: 3%;
     align-items: center;
+    margin-bottom: 3%;
+    z-index: 50;
 }
 
 .container-circle {
@@ -331,35 +340,53 @@ a {
               }
             }
 
-.ad-container { 
-    background-color: white;
-    position: absolute;
-    scale:80%;
-    height: 200px;
-    width: 300px;
-    left: 0%;
-    top:10%;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.3rem;
-    font-weight: bolder;
-    box-shadow: 10px 3px 5px rgba(58, 58, 58, 0.466);
-   transition: transform 100ms ease-in-out, rotate 250ms  cubic-bezier(0.075, 0.82, 0.165, 1);
-    a {
-        color: black;
-    }
-    animation: fadein 1s ease-out, slidedown2 1s ease-out;
-}
-
-.ad-container img {
-    margin-top: 5%;
-    margin-bottom: 1%;
-    height:70%;
-    object-fit: contain;
-}
-.ad-container:hover {
-    transform:scale(1.1);
-    rotate:2deg;
-}
+            .ad-container {
+                z-index: 13;
+                width: 130px;
+                height: 91.08px;
+                position: absolute;
+                overflow: hidden;
+                transition: width 0.3s ease-in-out;
+                border: 5px #FFD098 solid;
+                background: #5F4498;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                top:15%;
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .ad-container:hover {
+                width: 411.82px; /* Expanded width on hover */
+            }
+            
+            .ad-container img {
+                width: 119.11px;
+                height: 66.95px;
+                position: absolute;
+                justify-content: center;
+            }
+            
+            .ad-container .ad-text {
+                display: flex;
+                place-items: center;
+                width: 274px;
+                height: 29px;
+                position: absolute;
+                left: 128px;
+                text-align: center;
+                color: #F4CF92;
+                font-size: 20px;
+                font-family: 'Inter', sans-serif;
+                font-weight: 700;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+            
+            .ad-container:hover .ad-text {
+                opacity: 1;
+            }
+            
 
 h2 {
     position: absolute;
@@ -382,7 +409,7 @@ h2 {
     width:100vw;
     color:white;
     font-family: 'Ballet', serif;
-    font-size: 4rem;
+    font-size:2.8rem;
     text-align: center;
     font-weight: lighter;
     mix-blend-mode: normal;
@@ -390,16 +417,13 @@ h2 {
 }
 
 .quote-bg {
-    background: linear-gradient(
-        to right, 
-        #82828200,
-        #A6354E 20%,
-        #A6354E 70%,
-        #82828200 100%
-    );
-    mix-blend-mode: multiply;
-    height: 7vh;
-    width: 70vw;
+    background:transparent;
+    border: 5px #F4CF92 solid;
+    border-radius: 140px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);    transition: box-shadow 0.3s ease;
+    mix-blend-mode: screen;
+    height: 10vh;
+    width: 50rem;
     animation: insetExpand 1s forwards;
     transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -431,7 +455,9 @@ a {
     margin: 0;
     margin-left: 2%;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    z-index: 10;
+ }
 
 .cn {
     color: white;
@@ -441,14 +467,14 @@ a {
 
 .vertical-line {
     width: 2px;
-    background-color: white; 
+    background-color:white ; 
     height: 40vh;
     margin-top: 10px; /* Space between text and line */
 }
 
 .vertical:nth-child(2) {
     right: 0;
-    margin-right: 2%;
+    margin-right: 3%;
 }
 
   @keyframes intro {
@@ -466,11 +492,14 @@ a {
   }
   
 
+
+
   .maria-card {
-    background: linear-gradient(to bottom, #FAE1EF, #F3448B);
+    background: linear-gradient(to bottom, #FAE1EF, #6f55e7);
     background: 
-    linear-gradient(#fae1ef89, hsla(336, 100%, 50%, 0.627)), 
+    linear-gradient(#F4CF92, #beb0ff),
     url('../img/card-bg.png');
+    background-blend-mode: screen;
   background-size: cover;
   background-position: center;
     border-radius: 20px;
@@ -482,7 +511,6 @@ a {
     overflow: hidden;
     box-shadow: 2px 3px 5px rgba(58, 58, 58, 0.466);
     outline: 3.5px solid black;
-
   }
   
   .portrait {
@@ -494,9 +522,9 @@ a {
   
   .portrait img {
     position: relative;
-    bottom:7.7%;
+    bottom:-6%;
     margin-left: 5%;
-    height: 626px;
+    height: 550px;
     filter: drop-shadow(0.35rem 0.35rem #37373732);
     clip-path: inset(0 0 10px 0);
     border-radius: 28px;
@@ -511,7 +539,6 @@ a {
     
   
   }
-
   
   .maria-card-content p {
     text-wrap: balance;
@@ -519,6 +546,7 @@ a {
     overflow: hidden;
     margin-top:5px;
 }
+
 .card-title {
     font-size: 3rem;
     text-align: center;
@@ -536,42 +564,16 @@ a {
 
 }
 
-.label {
-    font-weight: bold;
-}
 
-h5 {
-    color:white;
-}
   .copyright {
-    margin-top: 200px;
+    margin-top:8px;
     align-self: flex-end;
     font-family: 'Inter', sans-serif;
 }
 
 
-.card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: 50px;
-    width: 90vw;
-    max-width: 150px; 
-    opacity: 0;
-    font-size: 1rem; 
-    transition: opacity 0.3s;
-    font-family: sans-serif;
-    font-weight: 400;
-}
 
-.maria-card:hover #card2 {
-    opacity: 1;
-}
 
-.ad-container:hover #card1 {
-    opacity: 1;
-}
 
 #card1 {
     background-color: rgba(255, 255, 255, 0.589);
@@ -588,7 +590,25 @@ h5 {
     color: black;
 }
 
+
+.label {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+h5 {
+    color:white;
+}
+ 
+
 h1 {
+    z-index: 99;
     color:white;
     width: 100%;
     margin: 0 auto;
@@ -597,9 +617,9 @@ h1 {
     justify-content: center;
     font-family: 'Pridi';
     position: absolute;
-    font-size: 4rem;
-    text-shadow: 5px 4px 2px #A6354E;
-    bottom: 7%;
+    font-size: 6rem !important;
+    text-shadow: 5px 4px 2px #585273;
+    bottom: 0%;
     animation: fadein 1s ease-out, slidedown2 1s ease-out;
 }
 
@@ -608,27 +628,101 @@ h1 {
     height: 100px;
     width: 350px;
     position: absolute;
-    bottom: 20%;
+    bottom: 25%;
     margin: 0;
-    right: 4%;
+    right: 8%;
+    text-align: right;
     font-size: 2rem;
     animation: fadein 1s ease-out, slideleft 1s ease-out;
-    h3 {margin:4px; color: #150071;font-size: 1.4em;}
+    h3 {margin:4px; color: #150071;font-size: 1.2em;}
     h5 {margin: 0;  font-family: 'Noto Sans JP', sans-serif; font-weight:50px;
     }
 }
 
-.collab-ad {
+
+
+.desc-ad {
     height: 100px;
-    width: 400px;
-    text-wrap: balance;
+    width: 350px;
     position: absolute;
     text-align: right;
+    top: 20%;
+    margin: 0;
+    right: 4%;
+    font-size: 2rem;
+    animation: fadein 1s ease-out, slideleft 1s ease-out;
+    h3 {margin:4px; color: #FFD098;font-size: 1.4em;}
+    h5 {margin: 0;  font-family: 'Noto Sans JP', sans-serif; font-weight:50px;
+    }
+}
+
+.project-ad {
+    background-color: #150071;border: 5px #F4CF92 solid;
+    height: 120px;
+    width: 500px;
+    text-wrap: balance;
+    position: absolute;
+    text-align: center;
     top:40vh;
     margin: 0;
     right: 4%;
     font-size: 1.7rem;
     animation: fadein 1s ease-out, slideright 1s ease-out;
-    h3 {margin:4px; color: white;font-size: 1.4em; text-shadow: 3px 2px #661519;}
+    h3 {margin:4px; color: white;font-size: 1.2em; text-shadow: 3px 2px #661519;}
     h5 {margin: 0;font-size: 3rem;}
+}
+
+
+.vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay;
+    background: radial-gradient(circle, rgba(181, 228, 255, 0.088) 60%, rgba(26, 0, 67, 0.7) 100%);
+    border-radius: 10px;
+}
+
+.hero-overlay {
+    overflow: hidden;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85),
+      transparent
+    );
+  }
+
+  .watch-btn {
+    margin-top:2%;
+    border-radius: 30px !important;
+    font-size: 2rem !important;
+    font-weight: bolder !important;
+    border: 5px #F4CF92 solid !important;
+    background-color: #0F0F0F !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8) !important;
+    transition: transform 200ms ease !important;
+}
+
+
+.watch-btn:hover {
+    transform: scale(1.2) !important;
+}
+.teaser {
+    position:absolute;
+    color:white;
+    text-align: center;
+    display: grid;
+    width: 100vw;
+    margin:auto;
+    bottom:10%;
+    pointer-events: auto !important;
+    z-index: 999999 !important;
+    font-size:2rem;
 }

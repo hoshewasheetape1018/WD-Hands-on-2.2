@@ -295,6 +295,9 @@ button:hover {
     font-family: 'Inter', sans-serif;
 }
 
+h5 {
+    color:#E22678;
+}
 .caution {
     background-color: #000000;
     color:white;
@@ -435,6 +438,7 @@ button:hover {
     overflow: hidden;
     margin-top:5px;
 }
+
 .card-title {
     font-size: 3rem;
     text-align: center;
@@ -452,15 +456,9 @@ button:hover {
 
 }
 
-.label {
-    font-weight: bold;
-}
 
-h5 {
-    color:#E22678;
-}
   .copyright {
-    margin-top: 200px;
+    margin-top: 10px;
     align-self: flex-end;
     font-family: 'Inter', sans-serif;
 }
@@ -502,6 +500,11 @@ h5 {
     background-color: #4f4f4f63;
     mix-blend-mode: multiply;
     color: black;
+}
+
+
+.label {
+    font-weight: bold;
 }
 
 h1 {
