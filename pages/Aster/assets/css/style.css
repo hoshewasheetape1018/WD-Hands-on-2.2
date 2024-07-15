@@ -12,9 +12,8 @@ html, body {
 }
 
 
-body :not(#loading-screen) {
+body:not(#loading-screen) {
     animation-delay: 5s !important;
-    
 }
 
 .header {
@@ -83,7 +82,7 @@ filter: invert(100%);
     align-items: center;
     pointer-events: none;
     animation: fadeOut 2s forwards;
-    animation-delay: 4.s;
+    animation-delay: 5s;
 }
 
 .loading-content {
