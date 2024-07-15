@@ -27,7 +27,7 @@ filter: invert(100%);
 }
 
 .navigation {
-    width: 100vw;;
+    width: 100vw;
     height: 8vh;
     display: flex;
     justify-content: center;
