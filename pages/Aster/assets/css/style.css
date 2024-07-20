@@ -61,11 +61,12 @@ filter: invert(100%);
 }
 
 .navigation a:hover {
+    color:yellow;
     text-shadow: 
--1px -1px 10px #ff8dd97b,
-1px -1px 10px #ff8dd97b,
--1px  1px 10px #ff8dd97b,
-1px  1px 10px #ff8dd97b;
+-1px -1px 10px #ffff8d7b,
+1px -1px 10px #ffff8d7b,
+-1px  1px 10px #ffff8d7b,
+1px  1px 10px #ffff8d7b;
 }
 
 
