@@ -6,7 +6,6 @@
 }
 
 html, body {
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
@@ -81,7 +80,9 @@ filter: invert(100%);
     display: flex;
     justify-content: center;
     text-align: center;
-    overflow: hidden !important;
+    overflow: hidden;
+    background-attachment: fixed;
+
 }
 
 .content1 img {
@@ -244,9 +245,9 @@ h2 {
 
 .quote {
     color:white;
-    font-family: 'Ballet', serif;
-    font-size: 4rem;
-    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    text-align: left;
     font-weight: lighter;
     mix-blend-mode: normal;
     animation: fadein 1s ease-out, slidedown2 1s ease-out;
@@ -257,37 +258,14 @@ h2 {
     1px  1px 10px #8dfff47b;
 }
 
-.quote-bg {
-    background: linear-gradient(
-        to right, 
-        #82828200,
-        #A6354E 20%,
-        #A6354E 70%,
-        #82828200 100%
-    );
-    mix-blend-mode: multiply;
-    height: 7vh;
-    width: 70vw;
-    animation: insetExpand 1s forwards;
-    transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-@keyframes insetExpand {
-    0% {
-        clip-path: inset(0% 50%); /* Start clipped on left and right */
-    }
-    100% {
-        clip-path: inset(0%); /* Fully reveal */
-    }
-}
 
 .quote-container{
     position: absolute;
     top: 70vh;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    width:100vw;
 }
 
 button {
@@ -378,7 +356,6 @@ h5 {
   .maria-card-content p {
     text-wrap: balance;
     font-size: 1.5rem;    
-    overflow: hidden;
     margin-top:5px;
 }
 
@@ -454,14 +431,13 @@ h1 {
     color:white;
     width: 100%;
     margin: 0 auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    text-align: left;
     position: absolute;
-    font-size: 4rem;
-    text-shadow: 5px 4px 2px #A6354E;
-    top: 77%;
+    text-shadow: 5px 4px 2px #918360;
+    top: 20%;
     animation: fadein 1s ease-out, slidedown2 1s ease-out;
+    font-family: 'Pirata One';
+    font-size: 10px;
     
 }
 
