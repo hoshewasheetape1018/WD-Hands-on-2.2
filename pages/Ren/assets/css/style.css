@@ -1,9 +1,23 @@
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
 .header {
+    text-align: center;
     display: flex;
     align-items: center;
     padding: 0 20px; 
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: -1px;
     z-index: 1000; 
@@ -12,10 +26,17 @@
 
 .logo-container {
     margin-right: auto; 
-    margin-top:5px;
+    position: absolute;
+    top:4%;
+}
+
+.header img {
+filter: invert(100%);
 }
 
 .navigation {
+    width: 100vw;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +48,7 @@
 
 .navigation a {
     text-decoration: none;
-    color: black;
+    color: white;
     transition: 0.2s ease-in-out;
 }
 
@@ -36,9 +57,430 @@
 }
 
 .navigation a:hover {
+    color:aquamarine;
     text-shadow: 
--1px -1px 10px #ff8dd97b,
-1px -1px 10px #ff8dd97b,
--1px  1px 10px #ff8dd97b,
-1px  1px 10px #ff8dd97b;
+-1px -1px 10px #8dfff47b,
+1px -1px 10px #8dfff47b,
+-1px  1px 10px #8dfff47b,
+1px  1px 10px #8dfff47b;
+}
+
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; pointer-events: none; }
+}
+
+
+.content1 {
+    background-image: url("../img/bg.jpg");
+    background-size: 120%;
+    background-position: top left;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.content1 img {
+    overflow: hidden !important;
+}
+
+.content2 {
+    position: relative;
+    margin-top: -90px;
+    background: linear-gradient(to bottom, #ffffff00 0%, #ffffff80 5%, rgb(255, 255, 255) 10%);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    padding-bottom: 3%;
+    align-items: center;
+}
+
+body {
+    background-color: #918360;
+    overflow-x: hidden;
+    width: 100vw;
+    margin:0;
+}
+
+.vertical-line {
+    width:1px; background-color: white; height: 90vh;
+    position: absolute;
+    bottom: 0%;
+}
+
+.vertical-line:nth-child(2) {
+    background-color: white;
+    left:2%;
+}
+.vertical-line:nth-child(3)
+{
+    right: 2%;
+}
+
+.container-circle {
+    position:absolute;
+    top: 8%;
+    left:2%;
+
+}
+
+.color-circle {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    background-color: #DDF3FB;
+    outline: 5px solid white;
+    margin-block: 40px;
+    animation: fadein 1s ease-out;
+
+}
+
+.color-circle:nth-child(2){
+    background-color: #918360;
+}
+
+.color-circle:nth-child(3){
+    background-color: #661519;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+@keyframes slidedown {
+    from {
+        transform: translateY(-2%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    
+@keyframes slidedown2 {
+    from {
+        transform: translateY(-5%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    
+    @keyframes slideleft {
+        from {
+            transform: translateX(-5%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideright {
+            from {
+                transform: translateX(5%);
+              }
+              to {
+                transform: translateX(0);
+              }
+            }
+
+h2 {
+    position: absolute;
+}
+
+.quote {
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    text-align: left;
+    font-weight: lighter;
+    mix-blend-mode: normal;
+    animation: fadein 1s ease-out, slidedown2 1s ease-out;
+    text-shadow: 
+    -1px -1px 10px #8dfff47b,
+    1px -1px 10px #8dfff47b,
+    -1px  1px 10px #8dfff47b,
+    1px  1px 10px #8dfff47b;
+}
+
+
+.quote-container{
+    left:10%;
+    position: absolute;
+    top: 35vh;
+    display: flex;
+    width:100vw;
+}
+
+button {
+    top:48vh;
+    left:10%;
+    position: absolute;
+    border-radius: 200px !important;
+    border: 2px solid white;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    height:50px;
+    width:160px;
+    font-size: 20px !important;
+    background-color: #661519;
+    animation: fadein 1.5s ease-out, slidedown2 2s cubic-bezier(0.23, 1, 0.320, 1);
+    a {    color: white !important;
+    }
+}
+
+a {
+    text-decoration: none !important;
+}
+
+button:hover {
+    background-color: aquamarine;
+  a {  color: black !important;}
+}
+
+.artist-credit {
+    top:50%;
+    color:white;
+    position: absolute;
+    right:3%;
+    font-family: 'Inter', sans-serif;
+}
+
+h5 {
+    color:#E22678;
+}
+
+  .aia-card {
+    background: 
+    linear-gradient(#6ef1de90, #053a30bd), 
+    url('../img/card-bg.png');
+  background-size: cover;
+  background-position: center;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    margin-top:10%;
+    width: 70vw;
+    height: 80vh;
+    overflow: hidden;
+    box-shadow: 2px 3px 5px rgba(58, 58, 58, 0.466);
+    outline: 3.5px solid black;
+
+  }
+  
+  .portrait {
+    margin: 0;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+    margin-left: -40%;
+  }
+  
+  .portrait img {
+    position: relative;
+    bottom:0;
+    height:650px;
+    filter: drop-shadow(0.35rem 0.35rem #37373732);
+    border-radius: 28px;
+  }
+  
+  .aia-card-content {
+    margin:5%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Lora', sans-serif;
+    
+  
+  }
+  
+  .aia-card-content p {
+    text-wrap: balance;
+    font-size: 1.5rem;    
+    margin-top:5px;
+}
+
+.card-title {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 2%;
+    text-shadow: 3px 0px white;
+    font-family: 'Playfair Display';
+}
+
+.card-subtitle {
+    font-size:2rem;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 5%;
+
+}
+
+
+  .copyright {
+    margin-top: 10px;
+    align-self: flex-end;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.label {
+    font-weight: bold;
+}
+
+h1 {
+    color:white;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 5rem !important;
+    left:10%;
+    position: absolute;
+    text-shadow: 3px 2px #918360;
+    top: 20%;
+    animation: fadein 1s ease-out, slidedown2 1s ease-out;
+    font-family: 'Pirata One';    
+}
+
+
+.collab-ad {
+    height: 100px;
+    width: 400px;
+    text-wrap: balance;
+    position: absolute;
+    text-align: right;
+    top:40vh;
+    margin: 0;
+    right: 4%;
+    font-size: 1.7rem;
+    animation: fadein 1s ease-out, slideright 1s ease-out;
+    h3 {margin:4px; color: white;font-size: 1.4em; text-shadow: 3px 2px #661519;}
+    h5 {margin: 0;font-size: 3rem;}
+}
+
+.container-card {
+    width: 146px;
+    height: 135px;
+    position: absolute;
+    left: 10%;
+    top:60vh;
+    animation: fadein 1s ease-out, slidedown 1s ease-out;
+}
+
+.box {
+    width: 146px;
+    height: 135px;
+    position: absolute;
+    background: white;
+    border-radius: 13px;
+    overflow: hidden; /* Ensures the black part stays within the rounded corners */
+}
+
+.box::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 90px;
+    background: black;
+    border-radius: 3px 3px 0 0; /* Top corners only */
+}
+
+.image {
+    width: 108px;
+    height: 61px;
+    position: absolute;
+    left: 19px;
+    top: 16px;
+}
+
+.label2 {
+    position: absolute;
+    left: 21px;
+    top: 98px;
+    color: black;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+
+.container-card:nth-of-type(2) {
+    left: 21%;
+}
+
+.container-card:nth-of-type(3) {
+    left: 32%;
+}
+
+.outfit-ad-container {
+    width: 326px;
+    height: 264px;
+    position: absolute;
+    background: #591516;
+    border: 5px solid white;
+    overflow: hidden;
+    bottom: 0;
+    right:5%;
+    animation: zoom 1s infinite;
+
+  }
+  
+@keyframes zoom {
+  0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 110%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
+
+.new-outfit-text {
+    position: absolute;
+    left: 29px;
+    top: 16px;
+    color: white;
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.outfit-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+}
+
+.top-image {
+    top: 68px;
+    max-width: 277px; 
+}
+
+.bottom-image {
+    top: 165px;
+    max-width: 280px;
 }

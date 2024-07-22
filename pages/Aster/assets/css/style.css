@@ -23,7 +23,7 @@ body :not(#loading-screen, .watch-btn) {
     position: absolute;
     width: 100%;
     top: -1px;
-    z-index: 1000; 
+    z-index: 999999; 
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -493,7 +493,7 @@ a {
 
 
 
-  .maria-card {
+  .aster-card {
     background: linear-gradient(to bottom, #FAE1EF, #6f55e7);
     background: 
     linear-gradient(#F4CF92, #beb0ff),
@@ -529,17 +529,20 @@ a {
     border-radius: 28px;
   }
   
-  .maria-card-content {
+  .aster-card-content {
     margin:5%;
     display: flex;
     flex-direction: column;
     height: 100%;
     font-family: 'Lora', sans-serif;
+    h3 {
+        font-weight: bold;
+    }
     
   
   }
   
-  .maria-card-content p {
+  .aster-card-content p {
     text-wrap: balance;
     font-size: 1.5rem;    
     overflow: hidden;
