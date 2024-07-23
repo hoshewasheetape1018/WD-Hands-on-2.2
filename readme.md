@@ -6,21 +6,21 @@
 <div align="center">
   <a href="https://github.com/zyx-0314/">
   <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+    <img src="./assets/img/ILUNA_logo.webp" width="100" height="100">
   </a>
 <!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
+  <h3 align="center">Hero and Card Designs</h3>
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  Short Description. (Optional)
+Vtuber group ILUNA themed!
 </div>
 
 <br />
 
 <!-- TODO: Change the zyx-0314 into your github username  -->
 <!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
+![](https://visit-counter.vercel.app/counter.png?page=francesca1018/WD-Hands-on-2)
 
 ---
 
@@ -129,3 +129,6 @@ WD-ProjectName
 |W3Schools| HTML, CSS | https://www.w3schools.com/ |
 |Figma | Design Plan | https://www.figma.com/design/qxZx7163HeuxHngdIsoCwl/Design-ILUNA?node-id=0-1&t=snbQGIGMgSG26xwg-1 |
 | Renvader | Ren page | https://x.com/Haku60733327/status/1661875517274898432 |
+|Nijisanji | Website theme | https://www.nijisanji.jp/en/talents?filter=nijisanjien |
+| Virtual Youtuber Wiki | Media Assets | https://virtualyoutuber.fandom.com/wiki/Maria_Marionette |
+Bootstrap Carousel | Carousel | https://getbootstrap.com/docs/5.3/examples/carousel/ |
