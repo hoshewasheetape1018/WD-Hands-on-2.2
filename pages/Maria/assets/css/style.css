@@ -387,7 +387,6 @@ h5 {
   }
   
   .maria-card {
-    background: linear-gradient(to bottom, #FAE1EF, #F3448B);
     background: 
     linear-gradient(#fae1ef89, hsla(336, 100%, 50%, 0.627)), 
     url('../img/card-bg.png');

@@ -272,19 +272,20 @@ h5 {
     margin-top:10%;
     width: 70vw;
     height: 80vh;
-    overflow: hidden;
     box-shadow: 2px 3px 5px rgba(58, 58, 58, 0.466);
     outline: 3.5px solid black;
+    overflow: hidden;
 
   }
   
   .portrait {
-    margin: 0;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0;
-    overflow: hidden;
-    margin-left: -10%;
+    position: relative;
+    bottom:7.7%;
+    margin-left: 5%;
+    height: 626px;
+    filter: drop-shadow(0.35rem 0.35rem #37373732);
+    clip-path: inset(0 0 10px 0);
+    border-radius: 28px;
   }
   
   .portrait img {
@@ -293,6 +294,8 @@ h5 {
     height:650px;
     filter: drop-shadow(0.35rem 0.35rem #37373732);
     border-radius: 28px;
+    
+    
   }
   
   .aia-card-content {
