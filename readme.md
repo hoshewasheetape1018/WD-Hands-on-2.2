@@ -57,20 +57,25 @@
 
 <!-- TODO: To be changed -->
 <!-- The following are just sample -->
-Description of the project in details.
+ILUNA (vtuber group) themed website to demonstrate
+Hero page design and static/animated card designs.
 
 Guiding Question:
 - What is the project
+The project demonstrates Hero page designs and static/animated card designs.
 - Whats the purpose
+To demonstrate
 - What are key components
+Hero page design and static/animated card designs.
 - What technology used and how it is used
+HTML, CSS, JS
 
 ### Key Components
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+- 5 unique Hero page designs
+- Card designs
+- Card gallery
 
 ### Technology
 <!-- TODO: List of Technology Used -->
@@ -123,3 +128,4 @@ WD-ProjectName
 | Guide for UI | UI Design | https://ishadeed.com/article/handling-text-over-image-css/ |
 |W3Schools| HTML, CSS | https://www.w3schools.com/ |
 |Figma | Design Plan | https://www.figma.com/design/qxZx7163HeuxHngdIsoCwl/Design-ILUNA?node-id=0-1&t=snbQGIGMgSG26xwg-1 |
+| Renvader | Ren page | https://x.com/Haku60733327/status/1661875517274898432 |
